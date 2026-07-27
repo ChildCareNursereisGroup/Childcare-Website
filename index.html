@@ -866,21 +866,21 @@ body.en .prog-card{text-align:left;align-items:flex-start;}
 
 /* ═══ HOME SUB-BAR (only inside page-home) ═══ */
 .home-subbar {
-  background: #f4f7ff;
-  border-bottom: 2px solid #dde8ff;
-  display: flex; overflow-x: auto; scrollbar-width: none;
-  padding: 0 20px;
+  background: #fff;
+  display: flex; justify-content: center; gap: 8px;
+  overflow-x: auto; scrollbar-width: none;
+  padding: 18px 20px; max-width: 1100px; margin: 0 auto;
 }
 .home-subbar::-webkit-scrollbar { display:none; }
 .hsb-btn {
-  padding: 11px 15px; font-size: 13px; font-weight: 700; color: #555;
-  background: none; border: none; border-bottom: 3px solid transparent;
-  margin-bottom: -2px; cursor: pointer; font-family: inherit;
+  padding: 9px 16px; font-size: 13px; font-weight: 700; color: #555;
+  background: #f4f7ff; border: 1.5px solid #eef2ff; border-radius: 50px;
+  cursor: pointer; font-family: inherit;
   white-space: nowrap; display:flex; align-items:center; gap:5px;
   transition: all .18s; flex-shrink: 0;
 }
-.hsb-btn:hover { color: #003087; }
-.hsb-btn.active { color: #003087; border-bottom-color: #f47920; font-weight: 900; }
+.hsb-btn:hover { color: #003087; border-color: #dde8ff; }
+.hsb-btn.active { color: #fff; background: #003087; border-color: #003087; font-weight: 900; }
 
 /* ═══ INNER SUB-BAR (programs / parents) ═══ */
 .inner-subbar {
@@ -937,6 +937,45 @@ body.en .prog-card{text-align:left;align-items:flex-start;}
 
 <!-- ═══ PAGE: HOME ═══ -->
 <div class="page on" id="page-home">
+
+  <!-- HERO -->
+  <div style="position:relative;background:linear-gradient(135deg,#003087,#0056b3 60%,#1a73e8);overflow:hidden;">
+    <div style="max-width:1100px;margin:0 auto;padding:56px 24px 40px;display:grid;grid-template-columns:1.1fr 0.9fr;gap:40px;align-items:center;">
+      <div>
+        <div style="display:inline-flex;align-items:center;gap:6px;background:rgba(255,255,255,.15);color:#fff;font-size:12px;font-weight:800;padding:6px 14px;border-radius:50px;margin-bottom:18px;">
+          <span data-ar>⭐ 4.8 تقييم من مئات الأسر</span><span data-en>⭐ 4.8 rated by hundreds of families</span>
+        </div>
+        <h1 style="font-size:36px;font-weight:900;color:#fff;line-height:1.28;margin:0 0 16px;">
+          <span data-ar>بيئة آمنة ومحبة<br>لطفلك <span style="color:#ffcb7a;">من اليوم الأول</span></span>
+          <span data-en>A safe, loving environment<br>for your child <span style="color:#ffcb7a;">from day one</span></span>
+        </h1>
+        <p style="font-size:15px;color:rgba(255,255,255,.85);line-height:1.8;margin:0 0 26px;max-width:440px;">
+          <span data-ar>5 فروع في الشارقة وعجمان، معتمدة من هيئة الشارقة للتعليم الخاص، بمنهج مونتيسوري، ونرعى أطفالكم بحب منذ 2014.</span>
+          <span data-en>5 branches across Sharjah & Ajman, SPEA-licensed, Montessori-based — nurturing your children with love since 2014.</span>
+        </p>
+        <div style="display:flex;gap:12px;flex-wrap:wrap;">
+          <button onclick="gotoPage('register')" style="background:linear-gradient(135deg,#f47920,#ffa040);color:#fff;border:none;padding:15px 30px;border-radius:50px;font-size:15px;font-weight:900;cursor:pointer;font-family:inherit;box-shadow:0 8px 20px rgba(244,121,32,.4);">
+            <span data-ar>📝 سجّلي طفلك الآن</span><span data-en>📝 Register your child</span>
+          </button>
+          <button onclick="gotoPage('branches')" style="background:rgba(255,255,255,.12);color:#fff;border:2px solid rgba(255,255,255,.4);padding:13px 26px;border-radius:50px;font-size:15px;font-weight:800;cursor:pointer;font-family:inherit;">
+            <span data-ar>تعرّفي على فروعنا</span><span data-en>Explore our branches</span>
+          </button>
+        </div>
+      </div>
+      <div>
+        <img src="https://lh3.googleusercontent.com/places/ANXAkqFgOJdorwu1AkE2AO94wQhkmyoyUy1kzIKhIEnt3LKGhtEC6X22DyZ6ZTtFp33AmPZiMlFNQIF9F-DJnIYG7LCxTmZPDTb4=s4800-w800-h600" alt="Al Farha Nursery" style="width:100%;height:300px;object-fit:cover;border-radius:20px;box-shadow:0 20px 50px rgba(0,0,0,.3);">
+      </div>
+    </div>
+    <div style="background:rgba(255,255,255,.08);border-top:1px solid rgba(255,255,255,.15);">
+      <div style="max-width:1100px;margin:0 auto;padding:18px 24px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;text-align:center;">
+        <div><div style="font-size:24px;font-weight:900;color:#fff;">5</div><div style="font-size:12px;color:rgba(255,255,255,.7);"><span data-ar>فروع</span><span data-en>Branches</span></div></div>
+        <div><div style="font-size:24px;font-weight:900;color:#fff;">600+</div><div style="font-size:12px;color:rgba(255,255,255,.7);"><span data-ar>طفل سنوياً</span><span data-en>Children/year</span></div></div>
+        <div><div style="font-size:24px;font-weight:900;color:#fff;">12+</div><div style="font-size:12px;color:rgba(255,255,255,.7);"><span data-ar>سنة خبرة</span><span data-en>Years experience</span></div></div>
+        <div><div style="font-size:24px;font-weight:900;color:#fff;">4.8⭐</div><div style="font-size:12px;color:rgba(255,255,255,.7);"><span data-ar>تقييم جوجل</span><span data-en>Google rating</span></div></div>
+      </div>
+    </div>
+  </div>
+
   <!-- Sub-bar inside home page -->
   <div class="home-subbar">
     <button class="hsb-btn on" onclick="showH('hp-about',this)">🏠 <span data-ar>نبذة عنا</span><span data-en>About</span></button>
